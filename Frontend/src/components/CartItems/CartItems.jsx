@@ -13,7 +13,6 @@ const CartItems = () => {
         <div className="cartitems-format-main">
           <p>Products</p>
           <p>Title</p>
-          <p>Size</p>
           <p>Price</p>
           <p>Quantity</p>
           <p>Total</p>
@@ -22,16 +21,12 @@ const CartItems = () => {
         <hr />
       </div>
       {all_product.map((e) => {
-        // const { addedPart, addedSize } = cartItems || {};
-        console.log('fffffdddd',cartItems);
-        
         if (cartItems[e.id] > 0) {
           return (
             <div>
               <div className="cartitems-format cartitems-format-main">
                 <img className="carticon-product-icon" src={e.image} alt="" />
                 <p>{e.name}</p>
-                {/* <p>{addedSize[e.id]}</p> */}
                 <p>${e.new_price}</p>
                 <button className="cartitems-quantity">
                   {cartItems[e.id]}

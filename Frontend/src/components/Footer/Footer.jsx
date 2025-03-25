@@ -15,7 +15,6 @@ const Footer = () => {
             seamless online experience!
           </p>
         </div>
-
         <div className="footer-section links">
           <h3>Quick Links</h3>
           <ul>

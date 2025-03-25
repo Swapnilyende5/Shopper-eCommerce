@@ -9,8 +9,6 @@ const ProductDisplayPage = ({ product }) => {
   const [selectSize, setSelectSize] = useState("M");
 
   const handleSize = (size) => {
-    console.log("ddddd",size);
-    
     setSelectSize(size);
   };
 

@@ -70,27 +70,22 @@
 @media (max-width: 768px) {
     .loginsignup-container {
         width: 90%;
-        /* Make it responsive using percentage */
         height: auto;
         padding: 30px 20px;
-        /* Reduce padding for smaller screens */
     }
 
     .loginsignup-container h1 {
         font-size: 28px;
-        /* Adjust heading size */
     }
 
     .loginsignup-fields input {
         height: 60px;
         width: 92%;
-        /* Reduce input height */
         font-size: 16px;
     }
 
     .loginsignup-container button {
         width: 100%;
-        /* Make button width responsive */
         height: 60px;
         font-size: 20px;
     }
@@ -101,7 +96,6 @@
 
     .loginsignup-agree {
         gap: 10px;
-        /* Reduce gap between elements */
         font-size: 16px;
     }
 }

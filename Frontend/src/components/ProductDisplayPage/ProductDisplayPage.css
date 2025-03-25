@@ -1,0 +1,224 @@
+.productdisplay {
+    display: flex;
+    margin: 0 122px;
+}
+
+/* .productdisplay-left {
+    display: flex;
+    gap: 17px;
+} */
+.productdisplay-left-img {
+    display: flex;
+    gap: 17px;
+}
+
+.productdisplay-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.productdisplay-img-list img {
+    height: 112px;
+}
+
+.productdisplay-main-img {
+    width: 400px;
+    height: 472px;
+}
+
+.productdisplay-right {
+    margin: 0 34px 0 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productdisplay-right h1 {
+    color: #3d3d3d;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.productdisplay-right-stars {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    gap: 5px;
+    color: #1c1c1c;
+    font-size: 16px;
+}
+
+.productdisplay-right-prices {
+    display: flex;
+    margin: 30px 0;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.productdisplay-right-price-old {
+    color: #818181;
+    display: flex;
+    font-size: 18px;
+    text-decoration: line-through;
+    align-items: center;
+}
+
+.productdisplay-right-price-new {
+    color: #000000;
+}
+
+.productdisplay-right-description h4 {
+    color: #1c1c1c;
+}
+
+.productdisplay-right-size {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.productdisplay-right-size h1 {
+    color: #656565;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.productdisplay-right-sizes {
+    display: flex;
+    gap: 25px;
+}
+
+.productdisplay-right-sizes button {
+    padding: 10px 20px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.productdisplay-right button {
+    padding: 20px 40px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #ff4141;
+    margin: 28px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.productdisplay-right-category {
+    margin-top: 10px;
+}
+
+.productdisplay-right-category span {
+    font-weight: 600;
+}
+
+/* For Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .productdisplay {
+        flex-direction: column;
+        margin: 0 40px;
+        /* Adjust margin for better alignment */
+    }
+
+    .productdisplay-left-img {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .productdisplay-img-list img {
+        height: 80px;
+        /* Adjust thumbnail size */
+    }
+
+    .productdisplay-main-img {
+        width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+        max-width: 400px;
+    }
+
+    .productdisplay-right {
+        margin: 30px 0;
+        /* Adjust margin */
+    }
+
+    .productdisplay-right h1 {
+        font-size: 22px;
+        /* Reduce heading size */
+    }
+
+    .productdisplay-right-prices {
+        font-size: 20px;
+    }
+
+    .productdisplay-right-price-old {
+        font-size: 16px;
+    }
+
+    .productdisplay-right button {
+        width: 100%;
+        padding: 18px;
+    }
+}
+
+/* For Mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+    .productdisplay {
+        margin: 0 20px;
+    }
+
+    .productdisplay-left-img {
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    .productdisplay-img-list {
+        /* flex-direction: row; */
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .productdisplay-img-list img {
+        height: 85px;
+    }
+
+    .productdisplay-main-img {
+        /* max-width: 300px; */
+        height: 380px;
+    }
+
+    .productdisplay-right h1 {
+        font-size: 20px;
+    }
+
+    .productdisplay-right-prices {
+        font-size: 18px;
+    }
+
+    .productdisplay-right-price-old {
+        font-size: 14px;
+    }
+
+    .productdisplay-right-sizes button {
+        padding: 8px 16px;
+    }
+
+    .productdisplay-right button {
+        width: 100%;
+        padding: 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productdisplay-right-size {
+        display: block;
+    }
+}

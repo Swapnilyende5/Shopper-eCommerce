@@ -25,9 +25,14 @@ const Navbar = () => {
       </div>
       <ul className={`nav-menu ${isOpen ? "open" : ""}`}>
         {["/", "/mens", "/womens", "/kids"].map((path, index) => (
-          <Link className="nav-menu-link" to={path} key={index} onClick={() => setIsOpen(false)}>
+          <Link
+            className="nav-menu-link"
+            to={path}
+            key={index}
+            onClick={() => setIsOpen(false)}
+          >
             <li>
-              {path === "/" ? "Shop" : path.slice(1)}
+              {path === "/" ? "Shop" : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
               {location.pathname === path && <hr />}
             </li>
           </Link>

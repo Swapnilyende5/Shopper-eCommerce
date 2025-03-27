@@ -67,6 +67,23 @@
     padding: 10px 20px;
     cursor: pointer;
 }
+.nav-login-cart button {
+    padding: 7px 24px;
+    border: none;
+    outline: none;
+    background-color: #151515;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+  }
+  
+  .nav-login-cart button:hover {
+    transform: translateY(-3px);
+  }
+  
+
+
 
 .nav-login-cart img {
     width: 30px;

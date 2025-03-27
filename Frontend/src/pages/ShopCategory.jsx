@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
-// import dropdown_icon from "../components/assets/dropdown_icon.png";
 import Item from "../components/Item/Item";
+import MainButton from "../utils/MainButton/MainButton";
 import "./CSS/ShopCategory.css";
 
 const ShopCategory = ({ banner, category }) => {
@@ -36,8 +36,7 @@ const ShopCategory = ({ banner, category }) => {
       <img className="shopcategory-banner" src={banner} alt="" />
       <div className="shopcategory-indexSort">
         <p>
-          <span>Showing 1-{addItem}</span> out of {filteredByCategory.length}
-          products
+          <span>Showing 1-{addItem}</span> out of {filteredByCategory.length} products
         </p>
         <div className="shopcategory-sort">
           Sort by Rating:
@@ -65,9 +64,11 @@ const ShopCategory = ({ banner, category }) => {
       </div>
       {filteredByCategory.length > addItem && (
         <div className="shopcategory-loadmore">
-          <button type="button" onClick={handleExplore}>
-            Explore More
-          </button>
+          <MainButton
+            btnTitle="Explore More"
+            handleExplore={handleExplore}
+            isHomeButton
+          />
         </div>
       )}
     </div>

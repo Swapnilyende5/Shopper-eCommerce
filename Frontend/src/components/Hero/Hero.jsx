@@ -1,7 +1,7 @@
 import React from "react";
 import hand_icon from "../assets/hand_icon.png";
-import arrow_icon from "../assets/arrow.png";
 import hero_image from "../assets/hero_image.png";
+import MainButton from "../../utils/MainButton/MainButton";
 import "./Hero.css";
 
 const Hero = () => {
@@ -16,10 +16,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="hero-latest-btn">
-          <p>Latest Collections</p>
-          <img src={arrow_icon} alt="" />
-        </div>
+        <MainButton btnTitle="Latest Collections" />
       </div>
       <div className="hero-right">
         <img src={hero_image} alt="" />

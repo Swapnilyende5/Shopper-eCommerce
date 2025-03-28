@@ -3,51 +3,49 @@ import all_product from "../components/assets/all_product";
 
 export const ShopContext = createContext(null);
 
-const getDefaultCart = () => {
-  let cart = {};
-  for (let index = 0; index < all_product.length + 1; index++) {
-    cart[index] = 0;
-  }
-  return cart;
-};
-
 const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState(getDefaultCart());
   const [totalAddedItems, setTotalAddedItems] = useState(0);
-  const [selectedSize, setSelectedSize] = useState("M");
+  const [cart, setCart] = useState([]);
 
-  const addToCart = (itemId) => {
+  const addToCart = (productId, size) => {
     setTotalAddedItems(() => totalAddedItems + 1);
-    return setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    setCart((prevCart) => {
+      const productExists = prevCart.find(
+        (item) => item.id === productId && item.size === size
+      );
+      if (productExists) {
+        return prevCart.map((item) =>
+          item.id === productId && item.size === size
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        const product = all_product.find((p) => p.id === productId);
+        return [...prevCart, { ...product, size, quantity: 1 }];
+      }
+    });
   };
   
   const removeFromCart = (itemId) => {
-    setTotalAddedItems(() => totalAddedItems - 1);
-    return setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    const deletQuantity = cart.filter((a)=>a.id === itemId).map((a)=>a.quantity)[0];
+    setTotalAddedItems(()=> totalAddedItems - deletQuantity)
+    return setCart((prev) => prev.filter((item) => item.id !== itemId));
   };
 
   const getSubTotal = () => {
     let subtotal = 0;
-    for (const item in cartItems) {
-      if (cartItems[item] > 0) {
-        const itemInfo = all_product.find(
-          (product) => product.id === Number(item)
-        );
-        subtotal += itemInfo.new_price * cartItems[item];
-      }
+    for (const item of cart) {
+      subtotal += item.new_price * item.quantity;
     }
     return subtotal;
   };
 
   const contextValue = {
-    all_product,
-    cartItems,
     addToCart,
     removeFromCart,
     getSubTotal,
     totalAddedItems,
-    selectedSize,
-    setSelectedSize,
+    cart,
   };
 
   return (

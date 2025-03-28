@@ -1,11 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../context/ShopContext";
+import React, {  useEffect, useState } from "react";
 import Item from "../components/Item/Item";
 import MainButton from "../utils/MainButton/MainButton";
+import all_product from "../components/assets/all_product";
 import "./CSS/ShopCategory.css";
 
 const ShopCategory = ({ banner, category }) => {
-  const { all_product } = useContext(ShopContext);
   const [addItem, setAddItem] = useState(8);
 
   const filteredByCategory = all_product.filter(

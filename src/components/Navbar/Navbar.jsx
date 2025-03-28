@@ -7,6 +7,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const { totalAddedItems } = useContext(ShopContext);
+  
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 

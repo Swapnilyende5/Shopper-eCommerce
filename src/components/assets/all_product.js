@@ -43,6 +43,7 @@ let all_product = [
     image: p1_img,
     rating: 4.2,
     new_price: 50.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 80.5,
   },
   {
@@ -52,6 +53,7 @@ let all_product = [
     image: p2_img,
     rating: 3.2,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -61,6 +63,7 @@ let all_product = [
     image: p3_img,
     rating: 4.1,
     new_price: 60.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 100.5,
   },
   {
@@ -70,6 +73,7 @@ let all_product = [
     image: p4_img,
     rating: 4.8,
     new_price: 100.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 150.0,
   },
   {
@@ -79,6 +83,7 @@ let all_product = [
     image: p5_img,
     rating: 4,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -88,6 +93,7 @@ let all_product = [
     image: p6_img,
     rating: 5,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -97,6 +103,7 @@ let all_product = [
     image: p7_img,
     rating: 4.1,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -106,6 +113,7 @@ let all_product = [
     image: p8_img,
     rating: 3.5,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -115,6 +123,7 @@ let all_product = [
     image: p9_img,
     rating: 3.6,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -124,6 +133,7 @@ let all_product = [
     image: p10_img,
     rating: 2.9,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -133,6 +143,7 @@ let all_product = [
     image: p11_img,
     rating: 2.8,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -142,6 +153,7 @@ let all_product = [
     image: p12_img,
     rating: 2.9,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -151,6 +163,7 @@ let all_product = [
     image: p13_img,
     rating: 5,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -160,6 +173,7 @@ let all_product = [
     image: p14_img,
     rating: 4.6,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -169,6 +183,7 @@ let all_product = [
     image: p15_img,
     rating: 4.8,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -178,6 +193,7 @@ let all_product = [
     image: p16_img,
     rating: 3.6,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -187,6 +203,7 @@ let all_product = [
     image: p17_img,
     rating: 4.1,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -196,6 +213,7 @@ let all_product = [
     image: p18_img,
     rating: 4.6,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -205,6 +223,7 @@ let all_product = [
     image: p19_img,
     rating: 3.7,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -214,6 +233,7 @@ let all_product = [
     image: p20_img,
     rating: 4.5,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -223,6 +243,7 @@ let all_product = [
     image: p21_img,
     rating: 2.3,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -232,6 +253,7 @@ let all_product = [
     image: p22_img,
     rating: 4.5,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -241,6 +263,7 @@ let all_product = [
     image: p23_img,
     rating: 2.6,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -250,6 +273,7 @@ let all_product = [
     image: p24_img,
     rating: 4.6,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -259,6 +283,7 @@ let all_product = [
     image: p25_img,
     rating: 4.8,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -268,6 +293,7 @@ let all_product = [
     image: p26_img,
     rating: 5,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -277,6 +303,7 @@ let all_product = [
     image: p27_img,
     rating: 4.2,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -286,6 +313,7 @@ let all_product = [
     image: p28_img,
     rating: 4.8,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -295,6 +323,7 @@ let all_product = [
     image: p29_img,
     rating: 4.8,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -304,6 +333,7 @@ let all_product = [
     image: p30_img,
     rating: 2.5,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -313,6 +343,7 @@ let all_product = [
     image: p31_img,
     rating: 2.3,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -322,6 +353,7 @@ let all_product = [
     image: p32_img,
     rating: 4.6,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -331,6 +363,7 @@ let all_product = [
     image: p33_img,
     rating: 4.8,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -340,6 +373,7 @@ let all_product = [
     image: p34_img,
     rating: 4.8,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -349,6 +383,7 @@ let all_product = [
     image: p35_img,
     rating: 3.9,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
   {
@@ -358,6 +393,7 @@ let all_product = [
     image: p36_img,
     rating: 3.6,
     new_price: 85.0,
+    sizes: ["S", "M", "L", "XL", "XXL"],
     old_price: 120.5,
   },
 ];

@@ -14,3 +14,11 @@
         margin: 20px;
     }
 }
+@media (max-width: 420px) {
+    .mobile-wrap {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 120px;
+    }
+}

@@ -7,10 +7,11 @@ const Breadcrumbs = (props) => {
 
   return (
     <div className="breadcrumb">
-      HOME <img src={arrow_icon} alt="" /> SHOP <img src={arrow_icon} alt="" />
-      {product.category}
+      <span>HOME</span> <img src={arrow_icon} alt="" /> <span>SHOP</span>{" "}
       <img src={arrow_icon} alt="" />
-      {product.name}
+      <span>{product.category}</span>
+      <img src={arrow_icon} alt="" />
+      <span className="mobile-wrap">{product.name}</span>
     </div>
   );
 };

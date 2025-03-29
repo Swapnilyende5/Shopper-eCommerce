@@ -24,36 +24,38 @@ const CartItems = () => {
 
   return (
     <div className="cartitems">
-      {!!getSubTotal() && <div className="cartitems-format-mobile">
-        <div className="cartitems-format-main">
-          <p>Products</p>
-          <p>Title</p>
-          <p>size</p>
-          <p>Price</p>
-          <p>Quantity</p>
-          <p>Total</p>
-          <p>Remove</p>
+      {!!getSubTotal() && (
+        <div className="cartitems-format-mobile">
+          <div className="cartitems-format-main">
+            <p>Products</p>
+            <p>Title</p>
+            <p>size</p>
+            <p>Price</p>
+            <p>Quantity</p>
+            <p>Total</p>
+            <p>Remove</p>
+          </div>
+          <hr />
         </div>
-        <hr />
-      </div>}
+      )}
       {cart?.map(({ id, name, image, size, new_price, quantity }, index) => {
         return (
           <div key={index}>
             <div className="cartitems-format cartitems-format-main">
               <img className="carticon-product-icon" src={image} alt="" />
               <p>{name}</p>
-              <p>{size}</p>
-              <p>${new_price}</p>
-              <button className="cartitems-quantity">{quantity}</button>
-              <p>${new_price * quantity}</p>
-              <img
-                className="cartitems-remove-icon"
-                src={remove_icon}
-                onClick={() => {
-                  removeFromCart(id, size);
-                }}
-                alt=""
-              />
+                <p>{size}</p>
+                <p>${new_price}</p>
+                <button className="cartitems-quantity">{quantity}</button>
+                <p>${new_price * quantity}</p>
+                <img
+                  className="cartitems-remove-icon"
+                  src={remove_icon}
+                  onClick={() => {
+                    removeFromCart(id, size);
+                  }}
+                  alt=""
+                />
             </div>
             <hr />
           </div>

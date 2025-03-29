@@ -79,10 +79,12 @@
     resize: none;
     outline: none;
 }
-.review-form-inputs{
+
+.review-form-inputs {
     margin-bottom: 20px;
 }
-.review-form-inputs input{
+
+.review-form-inputs input {
     padding: 12px;
     margin-right: 10px;
     border-radius: 8px;
@@ -121,5 +123,13 @@
 @media (max-width: 768px) {
     .descriptionbox {
         margin: 50px 26px;
+    }
+}
+
+@media (max-width: 420px) {
+    .review-form-inputs input {
+        width: 88%;
+        margin-bottom: 10px;
+        margin-right: 0;
     }
 }

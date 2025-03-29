@@ -7,7 +7,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const { totalAddedItems } = useContext(ShopContext);
-  
+
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,24 +22,39 @@ const Navbar = () => {
         <p>SHOPPER</p>
       </Link>
       <div className="hamburger" onClick={toggleMenu}>
-        ☰
+        {isOpen ? "X" : "☰"}
       </div>
       <ul className={`nav-menu ${isOpen ? "open" : ""}`}>
         {["/", "/mens", "/womens", "/kids"].map((path, index) => (
-          <Link
-            className="nav-menu-link"
-            to={path}
-            key={index}
-            onClick={() => setIsOpen(false)}
-          >
-            <li>
-              {path === "/" ? "Shop" : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-              {location.pathname === path && <hr />}
-            </li>
-          </Link>
+          <>
+            <Link
+              className="nav-menu-link"
+              to={path}
+              key={index}
+              onClick={() => setIsOpen(false)}
+            >
+              <li>
+                {path === "/"
+                  ? "Shop"
+                  : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                {location.pathname === path && <hr />}
+              </li>
+            </Link>
+          </>
         ))}
+        <Link className="nav-menu-desktop nav-menu-link" to="/login">
+          <li>Login</li>
+        </Link>
+        <Link className="nav-menu-desktop nav-menu-link" to="/cart">
+          <li>
+            Cart
+            {totalAddedItems > 0 && (
+              <span className="nav-cart-count">{totalAddedItems}</span>
+            )}
+          </li>
+        </Link>
       </ul>
-      <div className="nav-login-cart">
+      <div className="nav-login-cart mobile">
         <Link to="/login">
           <button>Login</button>
         </Link>

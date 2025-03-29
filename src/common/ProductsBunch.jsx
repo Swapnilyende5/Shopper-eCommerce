@@ -1,29 +1,29 @@
-import React from 'react'
-import Item from '../components/Item/Item';
-import "./ProductsBunch.css"
+import React from "react";
+import Item from "../components/Item/Item";
+import "./ProductsBunch.css";
 
-
-const ProductsBunch = ({title, data}) => {
+const ProductsBunch = ({ title, data }) => {
   return (
     <div className="productsbunch">
       <h1>{title}</h1>
       <hr />
       <div className="productsbunch-item">
-        {data.map((item, i) => {
+        {data.map(({ id, name, image, new_price, old_price, rating }, i) => {
           return (
             <Item
               key={i}
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              new_price={item.new_price}
-              old_price={item.old_price}
+              id={id}
+              name={name}
+              image={image}
+              new_price={new_price}
+              old_price={old_price}
+              rating={rating}
             />
           );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductsBunch
+export default ProductsBunch;

@@ -38,7 +38,7 @@
 }
 
 .button--submit {
-    min-height: 50px;
+    min-height: 52px;
     padding: .5em 1em;
     border: none;
     border-radius: 0 6px 6px 0;
@@ -46,17 +46,10 @@
     color: #fff;
     font-size: 15px;
     cursor: pointer;
-    transition: background-color .3s ease-in-out;
 }
 
 .button--submit:hover {
     background-color: #5e5dcd;
-}
-
-.input:focus,
-.input:focus-visible {
-    border-color: #3898EC;
-    outline: none;
 }
 
 

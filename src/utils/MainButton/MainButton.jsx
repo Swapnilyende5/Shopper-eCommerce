@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./MainButton.css";
 
-const MainButton = ({ btnTitle,handleExplore, isHomeButton = false }) => {
+const MainButton = ({ btnTitle,handleClick, isHomeButton = false }) => {
   return !isHomeButton ? (
-    <button className="newBtn">
+    <button id="newBtn">
       <Link to="/latest-collections">
         <span>{btnTitle}</span>
       </Link>
     </button>
   ) : (
-    <button className="newBtn" onClick={handleExplore}>
+    <button id="newBtn" onClick={handleClick}>
       <span>{btnTitle}</span>
     </button>
   );

@@ -1,4 +1,4 @@
-.newBtn {
+#newBtn {
     outline: none;
     cursor: pointer;
     border: none;
@@ -19,14 +19,14 @@
     color: ghostwhite;
 }
 
-.newBtn span {
+#newBtn span {
     position: relative;
     z-index: 10;
     transition: color 0.4s;
 }
 
-.newBtn::before,
-.newBtn::after {
+#newBtn::before,
+#newBtn::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@
     z-index: 0;
 }
 
-.newBtn::before {
+#newBtn::before {
     content: "";
     background: #ff4141;
     width: 120%;
@@ -44,11 +44,11 @@
     transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
-.newBtn:hover::before {
+#newBtn:hover::before {
     transform: translate3d(100%, 0, 0);
 }
 
-.newBtn a {
+#newBtn a {
     font-size: 22px;
     font-weight: 500;
     color: white;

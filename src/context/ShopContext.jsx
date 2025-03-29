@@ -9,6 +9,11 @@ const ShopContextProvider = (props) => {
 
   const addToCart = (productId, size) => {
     setTotalAddedItems(() => totalAddedItems + 1);
+    const button = document.getElementById("toast");
+    button.classList.add("show");
+    setTimeout(() => {
+      button.classList.remove("show");
+    }, 3000);
     setCart((prevCart) => {
       const productExists = prevCart.find(
         (item) => item.id === productId && item.size === size
@@ -25,11 +30,15 @@ const ShopContextProvider = (props) => {
       }
     });
   };
-  
-  const removeFromCart = (itemId) => {
-    const deletQuantity = cart.filter((a)=>a.id === itemId).map((a)=>a.quantity)[0];
-    setTotalAddedItems(()=> totalAddedItems - deletQuantity)
-    return setCart((prev) => prev.filter((item) => item.id !== itemId));
+
+  const removeFromCart = (itemId, size) => {
+    const deletQuantity = cart
+      .filter((a) => a.id === itemId && a.size === size)
+      .map((a) => a.quantity)[0];
+    setTotalAddedItems(() => totalAddedItems - deletQuantity);
+    return setCart((prev) =>
+      prev.filter((item) => !(item.id === itemId && item.size === size))
+    );
   };
 
   const getSubTotal = () => {

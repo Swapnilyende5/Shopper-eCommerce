@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import star_icon from "../assets/star_icon.png";
 import star_dull_icon from "../assets/star_dull_icon.png";
 import { ShopContext } from "../../context/ShopContext";
+import ToastMessage from "../../common/ToastMessage";
 import "./ProductDisplayPage.css";
 
 const ProductDisplayPage = ({ product }) => {
@@ -40,7 +41,11 @@ const ProductDisplayPage = ({ product }) => {
           <div className="productdisplay-right-sizes">
             {["S", "M", "L", "XL", "XXL"].map((size) => {
               return (
-                <button type="button" style={getStyle(size)} onClick={() => handleSize(size)}>
+                <button
+                  type="button"
+                  style={getStyle(size)}
+                  onClick={() => handleSize(size)}
+                >
                   {size}
                 </button>
               );
@@ -66,7 +71,6 @@ const ProductDisplayPage = ({ product }) => {
             ${product.old_price}
           </div>
         </div>
-
         <div className="productdisplay-right-description">
           <h4>About this item</h4>
           <p>
@@ -77,12 +81,16 @@ const ProductDisplayPage = ({ product }) => {
             colors to suit your style.
           </p>
         </div>
-        <button onClick={() => addToCart(product.id, selectSize)}>ADD TO CART</button>
+        <button type="button" onClick={() => addToCart(product.id, selectSize)}>
+          <span className="button__text">ADD TO CART</span>
+          <span className="button__icon">+</span>
+        </button>
+        <ToastMessage message="This item has been added to cart!" />
         <p className="productdisplay-right-category">
-          <span>Category :</span>Women, T-shirt, Crop Top
+          <span>Category: </span>Women, T-shirt, Crop Top
         </p>
         <p className="productdisplay-right-category">
-          <span>Tags :</span>Modern, Latest
+          <span>Tags: </span>Modern, Latest
         </p>
       </div>
     </div>
